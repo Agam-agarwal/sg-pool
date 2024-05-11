@@ -1,0 +1,324 @@
+/*
+!*.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 1s linear infinite; !* Safari *!
+  animation: spin 1s linear infinite;
+  opacity: 0; !* Initially hidden *!
+}
+ body{
+   background: red;
+ }*!
+
+#circle-loader-wrap {
+  overflow: hidden;
+  position: relative;
+  margin-top: -10px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) inset;
+  background-color: white;
+  border-radius: 200px;
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#circle-loader-wrap:after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#circle-loader-wrap div {
+  overflow: hidden;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+#circle-loader-wrap .loader {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1000px;
+  background-color: orangered;
+}
+
+#circle-loader-wrap .left-wrap {
+  left: 0;
+}
+
+#circle-loader-wrap .left-wrap .loader {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transform-origin: 0 50% 0;
+  -webkit-transform-origin: 0 50% 0;
+  animation: loading-left 20s infinite linear;
+  -webkit-animation: loading-left 20s infinite linear;
+}
+
+#circle-loader-wrap .right-wrap {
+  left: 50%;
+}
+
+#circle-loader-wrap .right-wrap .loader {
+  left: -100%;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  transform-origin: 100% 50% 0;
+  -webkit-transform-origin: 100% 50% 0;
+  animation: loading-right 20s infinite linear;
+  -webkit-animation: loading-right 20s infinite linear;
+}
+
+@keyframes loading-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes loading-left {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+@keyframes loading-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes loading-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+!* Safari *!
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+*/
+
+.heading-text-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15vw;
+  margin-top: 5vw;
+}
+
+.heading-text{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5.5vw;
+  font-weight: 700;
+  line-height: 7.5vw;
+  text-align: center;
+  color: #FFA400;
+  margin: 0;
+
+
+  text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+  1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+
+}
+
+.amount{
+  font-family: LEMON MILK;
+  font-size: 4vw;
+  font-weight: 700;
+  line-height: 5vw;
+  text-align: center;
+  color: white;
+
+  text-shadow: 1px 0 #FFA400, -1px 0 #FFA400, 0 1px #FFA400, 0 -1px #FFA400,
+  1px 1px #FFA400, -1px -1px #FFA400, 1px -1px #FFA400, -1px 1px #FFA400;
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  font-family: Helvetica Neue;
+  font-size: 1.5vw;
+  font-weight: 700;
+  line-height: 2vw;
+  text-align: center;
+  box-shadow: 0px 3px 0px 0px #B67602;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  background: #FFA400;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.loader-wrapper {
+  position: relative;
+ /* width: 100px;
+  height: 100px;*/
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vw;
+}
+
+.loader {
+  /*position: absolute;
+  top: 0;
+  left: 0;*/
+  width: 4.5vw;
+  height: 4.5vw;
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  animation: spin linear infinite;
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #3498db;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(36deg); }
+  20% { transform: rotate(72deg); }
+  30% { transform: rotate(108deg); }
+  40% { transform: rotate(144deg); }
+  50% { transform: rotate(180deg); }
+  60% { transform: rotate(216deg); }
+  70% { transform: rotate(242deg); }
+  80% { transform: rotate(278deg); }
+  90% { transform: rotate(314deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: green;
+  display: none;
+}
+
+.progress-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vw;
+}
+
+.progress-circle {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.confetti-img{
+  position: absolute;
+  width: 100%;
+  filter: brightness(100%) blur(5px);
+}
+
+.svg {
+  transform: rotate(-90deg);
+}
+
+.svg-circle {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 10;
+  stroke-dasharray: 440.92;
+  stroke-dashoffset: 440.92;
+  transition: stroke-dashoffset 1s linear;
+}

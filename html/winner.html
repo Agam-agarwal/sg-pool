@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Winner</title>
+  <link rel="stylesheet" href="../css/winner.css">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="body-bg">
+<!--<div class="rays-layer"></div>-->
+<img src=
+       "../img/Confetti.gif"
+     alt="confetti Image"
+     class="confetti-img">
+<div class="logo-wrapper">
+  <img src=
+         "../img/Logo.png"
+       alt="logo"
+       class="logo">
+</div>
+<div class="heading-text-wrapper">
+  <p class="heading-text">YOU HAVE WON</p>
+  <div class="amount">$1,00,000</div>
+</div>
+<!--<div class="loader-wrapper">
+  <div class="loader"></div>
+  <div class="progress">10</div>
+</div>-->
+
+<div class="progress-container">
+  <div class="progress-circle">
+    <div class="count">10</div>
+    <svg class="svg" width="160" height="160">
+      <circle class="svg-circle" cx="80" cy="80" r="70"></circle>
+    </svg>
+  </div>
+</div>
+
+<div class="button-wrapper">
+  <button onclick="onScanNewTicket()">Scan New Ticket</button>
+</div>
+<!--<div class="loader"></div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-3">
+      <div id="circle-loader-wrap">
+        <div class="left-wrap">
+          <div class="loader"></div>
+        </div>
+        <div class="right-wrap">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<script>
+  let count = 10;
+  const progressElement = document.querySelector('.progress');
+  const messageElement = document.querySelector('.message');
+
+  const timerInterval = setInterval(() => {
+    count--;
+    progressElement.innerText = count;
+    if (count === 0) {
+      clearInterval(timerInterval);
+      document.querySelector('.loader').style.animation = 'none';
+      messageElement.innerText = 'Success!';
+     // window.location.href = "../index.html";
+
+    }
+
+  }, 1000); // Update every second
+
+  function onScanNewTicket() {
+    window.location.href = "../index.html";
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const progressBar = document.querySelector(".svg-circle");
+    const count = document.querySelector(".count");
+    let currentCount = 0;
+
+    const incrementCount = () => {
+      currentCount++;
+      count.textContent = 10 - currentCount;
+    };
+
+    const updateProgress = () => {
+      incrementCount();
+      const currentProgress = (currentCount / 10) * 440.92; // Full circle is 440
+      progressBar.style.strokeDashoffset = 440.92 - currentProgress;
+    };
+
+    const intervalId = setInterval(() => {
+      if (currentCount < 10) {
+        updateProgress();
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 1000); // Adjust speed of animation if needed
+  });
+
+</script>
+</body>
+</html>

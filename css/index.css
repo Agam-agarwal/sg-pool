@@ -1,0 +1,211 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-bg{
+  /*background-image: url( '/img/background.svg' );*/
+  background-image: url( '/img/Sparkle.gif' );
+ /* display: flex;
+  justify-content: center;
+  flex-direction: column;*/
+  width: 100%;
+  background-size: 100% 100%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.logo-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+
+@font-face {
+  font-family: josefinSans-bold;
+  src: url(./fonts/JosefinSans-Bold.ttf);
+}
+
+.banner-box{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: white;
+  font-size: 4vw;
+  font-weight: 700;
+  /*font-family: josefinSans-bold;*/
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.back{
+  width: 56vw;
+  align-self: center;
+}
+
+.banner-text-one{
+  position: absolute;
+  top: 3vw;
+  text-shadow: 1px 1px 1px black,1px 0 #0c81d1, -1px 0 #0c81d1, 0 1px #0c81d1, 0 -1px #0c81d1, 1px 1px #0c81d1, -1px -1px #0c81d1, 1px -1px #0c81d1, -1px 1px #0c81d1;
+}
+
+.banner-text-two{
+  position: absolute;
+  top: 9vw;
+  text-shadow: 1px 1px 1px black,1px 0 #0c81d1, -1px 0 #0c81d1, 0 1px #0c81d1, 0 -1px #0c81d1, 1px 1px #0c81d1, -1px -1px #0c81d1, 1px -1px #0c81d1, -1px 1px #0c81d1;
+}
+
+.arrow-box{
+  display: flex;
+  justify-content: center;
+  /*margin-top: -54px;*/
+  position: relative;
+  color: #013C7A;
+  font-weight: 700;
+  font-size: 2.5vw;
+}
+
+.arrow-text{
+  position: absolute;
+  top: 45%;
+  width: 23%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.arrow{
+  width: 41vw;
+  height: 23vw;
+  cursor: pointer;
+}
+
+.scanner-box-wrapper{
+  position: absolute;
+  bottom: 28%;
+}
+
+.bar-box{
+  width: 7vw;
+  height: 7vw;
+}
+
+.scanner-line{
+  /*width: 61px;
+  height: 5px;*/
+  width: 7vw;
+  height: 0.5vw;
+  display: block;
+  position: absolute;
+  background: #013C7A;
+  animation: MoveUpDown 5s linear infinite;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0% {
+    bottom: 3.25vw;
+  }
+  10%{
+    bottom: 3.25vw;
+  }
+  25%{
+    bottom:6.5vw;
+  }
+  75%{
+    bottom: 0;
+  }
+  90% {
+    bottom: 3.25vw;
+  }
+  95%{
+    bottom: 2.8vw;
+  }
+  100%{
+    bottom: 3.25vw;
+  }
+}
+
+.rays-layer{
+ /* background-image: url( '/img/bgRays.png' );*/
+ /* width: 100vw;
+  height: 100vh;
+  position: absolute;
+  bottom: 340px;
+  right: 161px;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;*/
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.content-container{
+  position: relative;
+}
+
+.rotating {
+  -webkit-animation: rotating 22s infinite linear;
+  -moz-animation: rotating 22s infinite linear;
+  -ms-animation: rotating 22s infinite linear;
+  -o-animation: rotating 22s infinite linear;
+  animation: rotating 22s infinite linear;
+  opacity: 0.2;
+  position: absolute;
+  /*-webkit-transform-origin: 52% 40%;
+  -moz-transform-origin: 52% 40%;
+  -o-transform-origin: 52% 40%;
+  transform-origin: 52% 40%;*/
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: center;
+}
+
+/*@media only screen and (max-width: 768px) {
+  !* Adjustments for smaller screens *!
+  .banner-box {
+    font-size: 3vw;
+  }
+
+}*/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Adjustments for medium-sized screens */
+  .banner-box {
+    font-size: 3vw; /* Example adjustment */
+  }
+
+}
