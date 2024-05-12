@@ -26,12 +26,11 @@
 
 <body class="body-bg">
 <div class="content-container">
-
   <img src=
-         "./img/rays.png"
+         "./img/rays-circle.png"
        alt="Rotated Image"
        class=" rotating">
-
+<div class="move-up">
 <div class="logo-wrapper">
   <img src=
          "./img/Logo.png"
@@ -44,16 +43,26 @@
          "./img/Text-background.png"
        alt="back"
        class="back">
+  <img src=
+         "./img/bg-layer.png"
+       alt="back"
+       class="back-layer">
   <div class="banner-text-one">SCAN YOUR LOTTERY</div>
   <div class="banner-text-two">TICKET HERE</div>
 </div>
+</div>
+  <div class="move-down">
 <div class="arrow-box">
-  <a href="./html/winner.html">
+  <img src=
+         "./img/arrow.png"
+       alt="arrow"
+       class="arrow">
+  <!--<a href="./html/winner.html">
     <img src=
            "./img/arrow.png"
          alt="arrow"
          class="arrow">
-  </a>
+  </a>-->
   <div class="scanner-box-wrapper">
     <img src=
            "./img/bar-box.png"
@@ -62,8 +71,30 @@
     <span class="scanner-line"></span>
   </div>
 </div>
+  </div>
 </div>
-<script src="js/app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var moveUpElement = document.querySelector('.move-up');
+    var moveDownElement = document.querySelector('.move-down');
+
+    // Function to toggle move classes
+    function toggleMoveClasses() {
+      moveUpElement.classList.toggle('move');
+      moveDownElement.classList.toggle('move');
+    }
+
+    // Add click event listener to trigger animation
+    document.querySelector('.arrow-box').addEventListener('click', function() {
+      toggleMoveClasses();
+      setTimeout(() => {
+        window.location.href = "../sg-pool-ui/html/winner.html";
+      }, 400)
+    });
+
+
+  });
+</script>
 </body>
 
 </html>

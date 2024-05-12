@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../css/winner.css">
   <link rel="stylesheet" href="../css/index.css">
 </head>
-<body class="body-bg">
+<body class="body-bg" onclick="onNext()">
 <!--<div class="rays-layer"></div>-->
 <img src=
        "../img/rays-circle.png"
@@ -24,7 +24,8 @@
 </div>
 <div class="heading-text-wrapper">
   <p class="heading-text">YOU HAVE WON</p>
-  <div class="amount">$1,00,000</div>
+  <div class="tabulated-text">Winning amount is still being tabulated.</div>
+  <div class="tabulated-text">Please come back shortly.</div>
 </div>
 <!--<div class="loader-wrapper">
   <div class="loader"></div>
@@ -41,7 +42,7 @@
 </div>
 
 <div class="button-wrapper">
-  <button id="scanButton">Scan New Ticket</button>
+  <button onclick="onScanNewTicket()">Scan New Ticket</button>
 </div>
 <!--<div class="loader"></div>
 <div class="container mt-5">
@@ -76,35 +77,15 @@
 
   }, 1000); // Update every second
 
-  /*function onScanNewTicket(event) {
+  function onScanNewTicket() {
     window.location.href = "../index.html";
-    event.stopPropagation();
   }
 
   function onNext() {
-    window.location.href = "../html/winner-tabulated.html";
-  }
-*/
-  function onScanNewTicket(event) {
-    window.location.href = " ../sg-pool-ui/index.html";
-    event.stopPropagation();
-  }
-
-  // Function to handle clicking anywhere on the body
-  function onNext(event) {
-    window.location.href = "../html/winner-tabulated.html";
-    event.stopPropagation();
+    window.location.href = "../html/barcode-invalid.html";
   }
 
   document.addEventListener("DOMContentLoaded", function() {
-    // Attach event listener to the "Scan New Ticket" button
-    const scanButton = document.getElementById("scanButton");
-    scanButton.addEventListener("click", onScanNewTicket);
-
-    // Attach event listener to the body
-    const body = document.body;
-    body.addEventListener("click", onNext);
-
     const progressBar = document.querySelector(".svg-circle");
     const count = document.querySelector(".count");
     let currentCount = 0;
