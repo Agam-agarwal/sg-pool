@@ -33,39 +33,39 @@
   justify-content: center;
   position: relative;
   color: white;
-  font-size: 4vw;
+  font-size: 5vw;
   font-weight: 700;
   /*font-family: josefinSans-bold;*/
   font-family: "Josefin Sans", sans-serif;
 }
 
 .back{
-  width: 56vw;
+  width: 68vw;
   align-self: center;
 }
 
 .back-layer{
   position: absolute;
-  width: 51.5vw;
-  top: 1.4vw;
+  width: 62.5vw;
+  top: 1.7vw;
 }
 
 .banner-text-one{
   position: absolute;
-  top: 3vw;
+  top: 4vw;
   text-shadow: 1px 1px 1px black,1px 0 #0c81d1, -1px 0 #0c81d1, 0 1px #0c81d1, 0 -1px #0c81d1, 1px 1px #0c81d1, -1px -1px #0c81d1, 1px -1px #0c81d1, -1px 1px #0c81d1;
 }
 
 .banner-text-two{
   position: absolute;
-  top: 9vw;
+  top: 11vw;
   text-shadow: 1px 1px 1px black,1px 0 #0c81d1, -1px 0 #0c81d1, 0 1px #0c81d1, 0 -1px #0c81d1, 1px 1px #0c81d1, -1px -1px #0c81d1, 1px -1px #0c81d1, -1px 1px #0c81d1;
 }
 
 .arrow-box{
   display: flex;
   justify-content: center;
-  margin-top: -2.8vw;
+  margin-top: -3.4vw;
   position: relative;
   color: #013C7A;
   font-weight: 700;
@@ -180,6 +180,24 @@
 }
 
 .rotating {
+  opacity: 0.2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.rotating .rotating_img {
+  -webkit-animation: rotating 22s infinite linear;
+  -moz-animation: rotating 22s infinite linear;
+  -ms-animation: rotating 22s infinite linear;
+  -o-animation: rotating 22s infinite linear;
+  animation: rotating 22s infinite linear;
+  border-radius: 50%;
+  width: 80vw;
+  height: 80vw;
+}
+
+/*.rotating {
   -webkit-animation: rotating 22s infinite linear;
   -moz-animation: rotating 22s infinite linear;
   -ms-animation: rotating 22s infinite linear;
@@ -194,7 +212,7 @@
   width: 1500px;
   height: 1500px;
   transform-origin: center;
-}
+}*/
 
 /*@media only screen and (max-width: 768px) {
   !* Adjustments for smaller screens *!

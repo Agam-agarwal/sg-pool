@@ -176,13 +176,13 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 5vw;
-  margin-top: 2vw;
+  margin-bottom: 10vw;
+  margin-top: 5vw;
 }
 
 .heading-text{
   font-family: "Josefin Sans", sans-serif;
-  font-size: 5.5vw;
+  font-size: 6.5vw;
   font-weight: 700;
   line-height: 7.5vw;
   text-align: center;
@@ -197,7 +197,7 @@
 
 .error-text{
   font-family: "Josefin Sans", sans-serif;
-  font-size: 5vw;
+  font-size: 6vw;
   font-weight: 700;
   line-height: 5vw;
   text-align: center;
@@ -299,7 +299,7 @@ button{
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 5vw;
+  margin-bottom: 1vw;
 }
 
 .progress-circle {
@@ -344,4 +344,9 @@ button{
   line-height: 3.5vw;
   text-align: center;
   color: white;
+}
+
+.no-internet{
+  width: 10vw;
+  margin: 0 auto;
 }
